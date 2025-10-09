@@ -59,6 +59,6 @@ A simple, beautiful and responsive QR code generator that lets you create, custo
 
 ## 📄 License
 
-MIT © Your Name
+MIT © Md Saif Ali
 
 Thank you — enjoy creating QR codes! 🚀
