@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="qrcode.css">
+</head>
+
+<body>
+    <!-- background dim overlay so the card remains readable on any bg image -->
+    <div class="bg-overlay" aria-hidden="true"></div>
+
+    <main class="container">
+        <header class="hero">
+            <h1>
+                <!-- inline SVG icon -->
+                <span class="icon-inline" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3h18v18H3z" fill="none" />
+                        <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" />
+                    </svg>
+                </span>
+                Custom QR Code Generator
+            </h1>
+            <p class="subtitle"><span class="icon-small" aria-hidden="true">🔧</span>Create, customize and download QR
+                codes instantly.</p>
+        </header>
+
+        <section class="card">
+            <form id="qrForm" class="controls">
+                <div class="form-row">
+                    <label for="qrText">Enter text or URL</label>
+                    <input type="text" id="qrText" placeholder="https://example.com" required>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-row">
+                        <label for="size">Size (px)</label>
+                        <input type="range" id="size" min="100" max="1000" value="300">
+                        <input type="number" id="sizeNumber" min="100" max="1000" value="300">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="fgColor">Foreground</label>
+                        <input type="color" id="fgColor" value="#000000">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="bgColor">Background</label>
+                        <input type="color" id="bgColor" value="#FFFFFF">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="ecc">Error correction</label>
+                        <select id="ecc">
+                            <option value="L">Low (L)</option>
+                            <option value="M">Medium (M)</option>
+                            <option value="Q">Quartile (Q)</option>
+                            <option value="H" selected>High (H)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" id="generateBtn" class="primary">Generate</button>
+                    <button type="button" id="clearBtn">Clear</button>
+                    <button type="button" id="downloadBtn" disabled>Download</button>
+                    <button type="button" id="copyLinkBtn" disabled>Copy Link</button>
+                </div>
+            </form>
+
+            <div id="qrPreview" class="preview">
+                <!-- new decorative preview background (fits the QR side nicely) -->
+                <div class="preview-bg" aria-hidden="true"></div>
+
+                <div id="qrCode" class="qr-placeholder">Your QR will appear here</div>
+                <p id="qrInfo" class="qr-info"></p>
+            </div>
+        </section>
+
+        <!-- small accessibility hint -->
+        <p class="hint">Enter any text, URL, emoji or long content — the QR will encode it all.</p>
+
+        <footer class="footer">
+            <small><span class="icon-small" aria-hidden="true">📎</span> Powered by api.qrserver.com · Responsive
+                UI</small>
+        </footer>
+    </main>
+
+    <script src="qrcode.js"></script>
+</body>
+
+</html>

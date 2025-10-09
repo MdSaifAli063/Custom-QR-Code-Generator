@@ -1,0 +1,418 @@
+/* Add your custom styles here */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --card: #ffffff;
+    --accent: #02335e;
+    --muted: #000b0d;
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    /* keep font & reset from earlier */
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    /* background image: cover and centered */
+    background-image: url('https://www.nestforms.com/files/news/as399066651-Generating-qrcodes2.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* fallback color */
+    min-height: 100vh;
+    /* center content vertically on tall viewports */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* outer spacing for smaller screens */
+    padding: 40px 20px;
+    color: #0f172a;
+}
+
+/* overlay: sits above bg image but below the main content */
+.bg-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9;
+    /* below .container (10) */
+    background: rgba(6, 11, 17, 0.32);
+    backdrop-filter: blur(2px);
+}
+
+/* main container centered and constrained for desktop */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    /* wider on large screens */
+    margin: 0 auto;
+    padding: 18px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    /* above overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+.hero {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: -0.3px;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.subtitle {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    opacity: 0.9;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    justify-content: center;
+}
+
+/* Card */
+.card {
+    width: 100%;
+    max-width: 980px;
+    box-sizing: border-box;
+    /* preserve existing card visuals (gradient/glass) */
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.65));
+    backdrop-filter: blur(6px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 18px;
+    box-shadow: 0 6px 30px rgba(2, 6, 23, 0.12);
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 18px;
+    align-items: start;
+}
+
+/* Controls */
+.controls {
+    width: 100%
+}
+
+.form-row {
+    margin-bottom: 12px
+}
+
+.form-row label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: var(--muted)
+}
+
+.form-row input[type="text"],
+.form-row input[type="number"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e6e9ef;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: box-shadow .18s ease, border-color .18s ease, transform .06s;
+}
+
+.form-row input[type="text"]:focus,
+.form-row input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: rgba(0, 116, 217, 0.9);
+    box-shadow: 0 6px 18px rgba(0, 116, 217, 0.08);
+    transform: translateY(-1px);
+}
+
+/* Grid for small controls */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* Range + number together */
+#size {
+    width: 100%;
+}
+
+#sizeNumber {
+    width: 100%;
+    padding: 10px
+}
+
+/* Color inputs */
+input[type="color"] {
+    width: 100%;
+    height: 44px;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #e6e9ef;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+button {
+    background: #fff;
+    border: 1px solid #d1d5db;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform .08s ease, box-shadow .12s ease, opacity .12s;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(11, 37, 69, 0.08);
+}
+
+button.primary {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    box-shadow: 0 6px 18px rgba(0, 116, 217, 0.18);
+}
+
+button.primary:hover {
+    box-shadow: 0 14px 30px rgba(0, 116, 217, 0.16);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed
+}
+
+/* Preview */
+.preview {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #fbfeff, #f6fbff);
+    border: 1px solid #f0f4f8;
+}
+
+.qr-placeholder {
+    width: 260px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    border-radius: 8px;
+    background: repeating-linear-gradient(45deg, #fff, #fff 10px, #f8fafc 10px, #f8fafc 20px);
+}
+
+.qr-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block
+}
+
+.qr-info {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--muted)
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 12px;
+    color: var(--muted)
+}
+
+/* Responsive */
+@media (max-width:880px) {
+    .card {
+        grid-template-columns: 1fr;
+        padding: 14px
+    }
+
+    .preview {
+        order: 2
+    }
+}
+
+/* Spinner */
+.spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 6px solid #e6eef9;
+    border-top-color: var(--accent);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+h1 {
+    color: #c85959;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Background decoration */
+.bg-decor {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.9;
+    filter: saturate(1.05) blur(6px);
+}
+
+.bg-decor svg {
+    width: 100%;
+    height: 100%;
+    display: block
+}
+
+/* Hint text */
+.hint {
+    text-align: center;
+    color: var(--muted);
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+/* Generated image style */
+.generated-qr {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 26px rgba(2, 6, 23, 0.08);
+}
+
+/* Small responsive tweaks for preview on very small screens */
+@media (max-width:420px) {
+    .qr-placeholder {
+        width: 220px;
+        height: 220px;
+    }
+
+    .card {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .actions button {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* enable fixed background (parallax-like) only on larger desktop screens */
+@media (min-width: 1200px) {
+    body {
+        background-attachment: fixed;
+        padding: 60px 40px;
+    }
+
+    .card {
+        padding: 22px;
+        box-shadow: 0 10px 40px rgba(2, 6, 23, 0.14);
+    }
+}
+
+/* mobile: reduce padding and avoid fixed background */
+@media (max-width: 880px) {
+    body {
+        padding: 20px 12px;
+        background-attachment: scroll;
+    }
+
+    .bg-overlay {
+        background: rgba(6, 11, 17, 0.22);
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+        padding: 14px
+    }
+}
+
+/* slight increase of card contrast on very large displays */
+@media (min-width: 1400px) {
+    .card {
+        padding: 26px;
+        box-shadow: 0 14px 50px rgba(2, 6, 23, 0.16);
+    }
+}
+
+/* Icon utilities for headers and small inline icons */
+.icon-inline {
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    vertical-align: middle;
+    margin-right: 0.6rem;
+    color: var(--accent);
+    fill: currentColor;
+    opacity: 0.95;
+}
+
+.icon-inline svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.icon-small {
+    display: inline-block;
+    font-size: 1.05rem;
+    vertical-align: middle;
+    margin-right: 0.4rem;
+    opacity: 0.9;
+}
