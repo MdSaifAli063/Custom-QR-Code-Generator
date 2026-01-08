@@ -49,11 +49,13 @@ A simple, beautiful and responsive QR code generator that lets you create, custo
 - Add logo or background uploads: enhance `qrcode.js` to compose a canvas (see comments in file for extension points).
 - Local hosting: for best reliability (CORS, downloads), serve files with a local static server (e.g., `npx serve`, `python -m http.server`).
 
+
 ## 🛠️ Troubleshooting
 
 - QR not generating? Check your internet connection — the app uses api.qrserver.com.
 - Download blocked or blank image? Some browsers restrict cross-origin downloads; try serving files via a static server or use the built-in download behavior (the app falls back to opening the image in a new tab).
 - Colors not applied? Ensure hex values are valid (e.g., `#000000`).
+
 
 ## 🔒 Security & Privacy
 
