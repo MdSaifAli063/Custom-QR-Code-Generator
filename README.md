@@ -5,6 +5,7 @@
 ![API](https://img.shields.io/badge/API-api.qrserver.com-lightgrey)
 ![Responsive](https://img.shields.io/badge/responsive-yes-orange)
 
+
 ## ✨ Highlights
 
 A simple, beautiful and responsive QR code generator that lets you create, customize, preview and download QR codes instantly.
