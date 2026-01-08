@@ -18,7 +18,7 @@ function generateQRCode(text) {
   return qrImage;
 }
 
-// expose a single global place for last generated URL so all handlers can access it
+
 window.lastGeneratedQrUrl = window.lastGeneratedQrUrl || "";
 
 // DOM ready
