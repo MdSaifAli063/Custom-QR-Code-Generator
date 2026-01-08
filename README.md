@@ -33,12 +33,14 @@ A simple, beautiful and responsive QR code generator that lets you create, custo
 5. Click "Generate" — preview appears on the right.
 6. Use "Download" to save the PNG or "Copy Link" to copy the generated image URL.
 
+
 ## 🗂️ Files
 
 - `qrcode.html` — main UI
 - `qrcode.css` — styling and responsive layout
 - `qrcode.js` — JS logic: build QR URL, preview, download, copy
 - `README.md` — this file
+
 
 ## 🎨 Customization Tips
 
