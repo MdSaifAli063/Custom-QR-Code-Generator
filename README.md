@@ -62,9 +62,11 @@ A simple, beautiful and responsive QR code generator that lets you create, custo
 - No server-side code — all requests go to api.qrserver.com.
 - The app does not store or transmit your data except for requests to the QR API when generating images.
 
+
 ## 🤝 Contribute
 
 - Suggestions and improvements are welcome. Fork the project and submit a PR.
+
 
 ## 📄 License
 
