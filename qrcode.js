@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Build URL and show QR (update to set global lastGeneratedQrUrl)
+
 function buildAndShowQR() {
   const text = document.getElementById("qrText").value || "";
   const qrCodeDiv = document.getElementById("qrCode");
