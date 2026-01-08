@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lastUrl = "";
   });
 
-  // Copy link (uses global lastGeneratedQrUrl)
+  
   copyLinkBtn.addEventListener("click", async () => {
     const lastUrl = window.lastGeneratedQrUrl || "";
     if (!lastUrl) return;
