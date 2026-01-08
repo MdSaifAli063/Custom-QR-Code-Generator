@@ -2,8 +2,6 @@ function generateQR() {
   const qrText = document.getElementById("qrText").value;
   const qrCodeDiv = document.getElementById("qrCode");
 
-  // You can use any QR code library here (e.g., qrcode.js)
-  // For demonstration purposes, let's assume you have a function called 'generateQRCode'
   const qrCodeImage = generateQRCode(qrText);
 
   // Display the QR code image
