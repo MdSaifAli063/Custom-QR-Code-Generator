@@ -165,10 +165,10 @@ function buildAndShowQR() {
   });
   const url = `${base}?${params.toString()}`;
 
-  // Load image to ensure it is generated before swapping UI
+  
   const img = new Image();
   img.alt = "Generated QR code";
-  img.crossOrigin = "anonymous"; // attempt anonymous fetch so blob operations can work
+  img.crossOrigin = "anonymous"; 
   img.onload = () => {
     qrCodeDiv.innerHTML = "";
     img.className = "generated-qr";
@@ -176,7 +176,7 @@ function buildAndShowQR() {
     qrInfo.textContent = `Size: ${size}px · ECC: ${eccValue}`;
     downloadBtn.disabled = false;
     copyLinkBtn.disabled = false;
-    // store lastUrl for copy/download in a global var
+  
     window.lastGeneratedQrUrl = url;
   };
   img.onerror = () => {
@@ -185,6 +185,6 @@ function buildAndShowQR() {
     downloadBtn.disabled = true;
     copyLinkBtn.disabled = true;
   };
-  // Trigger loading (data is already URI-encoded by URLSearchParams)
+  
   img.src = url;
 }
