@@ -146,13 +146,13 @@ function buildAndShowQR() {
     return;
   }
 
-  // Show spinner / busy state
+
   qrCodeDiv.innerHTML = '<div class="spinner" aria-hidden="true"></div>';
   qrInfo.textContent = "Generating...";
   downloadBtn.disabled = true;
   copyLinkBtn.disabled = true;
 
-  // Build API URL (encode text to support anything: emojis, long text, special chars)
+ 
   const base = "https://api.qrserver.com/v1/create-qr-code/";
   const params = new URLSearchParams({
     data: text,
