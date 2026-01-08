@@ -51,13 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
     sizeRange.value = v;
   });
 
-  // Form submit -> generate
+  
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     buildAndShowQR();
   });
 
-  // Clear button
+
   clearBtn.addEventListener("click", () => {
     form.reset();
     sizeRange.value = 300;
