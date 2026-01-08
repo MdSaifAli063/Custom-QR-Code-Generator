@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Download - fetch the image as blob and download (works better across origins)
+  
   downloadBtn.addEventListener("click", async () => {
     const lastUrl = window.lastGeneratedQrUrl || "";
     if (!lastUrl) return;
