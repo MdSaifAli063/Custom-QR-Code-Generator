@@ -9,7 +9,7 @@ function generateQR() {
   qrCodeDiv.appendChild(qrCodeImage);
 }
 
-// Replace this function with an actual QR code generation logic
+
 function generateQRCode(text) {
   const qrImage = document.createElement("img");
   qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(
