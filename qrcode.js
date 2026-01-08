@@ -21,7 +21,7 @@ function generateQRCode(text) {
 
 window.lastGeneratedQrUrl = window.lastGeneratedQrUrl || "";
 
-// DOM ready
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("qrForm");
   const textInput = document.getElementById("qrText");
@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const copyLinkBtn = document.getElementById("copyLinkBtn");
   const clearBtn = document.getElementById("clearBtn");
 
-  // replace local lastUrl usage with global variable
+  
   window.lastGeneratedQrUrl = "";
 
-  // Sync range and number inputs
+
   sizeRange.addEventListener("input", () => {
     sizeNumber.value = sizeRange.value;
   });
