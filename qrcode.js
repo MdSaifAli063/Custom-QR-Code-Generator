@@ -4,7 +4,7 @@ function generateQR() {
 
   const qrCodeImage = generateQRCode(qrText);
 
-  // Display the QR code image
+  
   qrCodeDiv.innerHTML = "";
   qrCodeDiv.appendChild(qrCodeImage);
 }
