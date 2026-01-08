@@ -15,11 +15,13 @@ A simple, beautiful and responsive QR code generator that lets you create, custo
 - Download QR as PNG, copy direct image link
 - Works with api.qrserver.com (no server required)
 
+
 ## 🔍 Demo
 
 - Open `qrcode.html` in your browser to try the app locally.
   
 ![image](https://github.com/MdSaifAli063/Custom-QR-Code-Generator/blob/d7361ae15e39085ec296de07cd8040a76e1b5eb8/Screenshot%202025-10-10%20011720_edited.png)
+
 
 ## ⚡ Quick Start
 
