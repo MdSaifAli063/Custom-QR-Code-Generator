@@ -25,7 +25,6 @@ body {
     background-size: cover;
     /* fallback color */
     min-height: 100vh;
-    /* center content vertically on tall viewports */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,7 +38,6 @@ body {
     inset: 0;
     pointer-events: none;
     z-index: 9;
-    /* below .container (10) */
     background: rgba(6, 11, 17, 0.32);
     backdrop-filter: blur(2px);
 }
